@@ -10,7 +10,7 @@ isLoggedIn();
 <div><hr></div>
 <div>Welcome: <?= $_SESSION['username']?></div>
 <div>Your Email: <?= $_SESSION['email']?></div>
-<div><a href="<?= logoutUser() ?>">Logout</a></div>
+<div><a href="/logout.php">Logout</a></div>
 <div><hr></div>
 </body>
 </html>

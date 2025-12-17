@@ -9,7 +9,7 @@ function startSessionIfNotExist(): void {
 function isLoggedIn(): void {
     startSessionIfNotExist();
     if (empty($_SESSION['username']) && empty($_SESSION['email'])) {
-        redirect('index.php');
+        redirect('login.php');
     }
 }
 
@@ -33,22 +33,8 @@ function sanitize_email(string $email): ?string {
 
 function logoutUser(): void {
     startSessionIfNotExist();
-
     $_SESSION = [];
-
-    if (ini_get("session.use_cookies")) {
-        $params = session_get_cookie_params();
-        setcookie(
-            session_name(),
-            '',
-            time() - 42000,
-            $params["path"],
-            $params["domain"],
-            $params["secure"],
-            $params["httponly"]
-        );
-    }
     // destroy session and redirect back entry point
     session_destroy();
-    redirect('index.php');
+    redirect('login.php');
 }
