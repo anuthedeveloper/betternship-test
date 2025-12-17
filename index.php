@@ -1,16 +1,4 @@
 <?php
-
-// Mayowa from Betternship
-// 1:58 PM
-// You’re building a simple login system for a web dashboard.
-// Please write PHP scripts to handle the following:
-// Registration: Accepts username, email, and password; hashes the password using password_hash(); and saves users to a users.json file.
-// Login: Verifies credentials and starts a session if successful.
-// Dashboard: Displays “Welcome, [username]” only if the user is logged in; otherwise redirects to the login page.
-// (Bonus) Add a logout script that ends the session and redirects back to the login page.
-// Note: You can assume this will be tested locally (no database).
-// The goal is clean, functional, and secure code that could work in a real-world PHP environment.
-// Invitation to Technical Interview with Betternship
 require 'server.php';
 include 'partials/header.php';
 ?>
