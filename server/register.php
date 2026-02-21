@@ -18,7 +18,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === "POST") 
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $user = ['username' => $username, 'email' => $email, 'password' => $hashedPassword, 'created_at' => date('Y-m-d H:i:s')];
         $users = [];
-        $file = 'users.json';
+        $file = 'data/users.json';
         if (file_exists($file)) {
             $content = file_get_contents($file);
             $users = json_decode($content, true) ?? [];

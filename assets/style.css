@@ -1,0 +1,50 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.error {
+  color: red;
+  margin-bottom: 0.4rem;
+}
+.success {
+  color: green;
+  margin-bottom: 0.2rem;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.align-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align-end button {
+  width: 100%;
+  padding: 0.4rem 0.52rem;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.675rem;
+}
+
+/* .label {
+  display: flex;
+  align-items: flex-start;
+} */
+
+input {
+  display: flex;
+  align-items: end;
+  border-radius: 4px;
+  border-width: 0px 0px 1px;
+  outline: 0;
+}
